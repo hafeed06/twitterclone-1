@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>MiniTwitter Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <section class="ftco-section">
+    <div class="container" style="width:800px;">
+      <blockquote class="blockquote text-center">
+        <p class="mb-0">EPITA - MiniTwitter Project</p>
+        <footer class="blockquote-footer">By Boris, Chady and Abdelhafid</footer>
+      </blockquote>
+      <button type="button" class="btn btn-primary btn-lg btn-block"
+        style="width:400px; margin-left:auto; margin-right:auto;" onclick="callMetamask()">Click to Enable MetaMask</button>
+      <br />
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="tweetText" placeholder="Type Your Tweet Here" aria-label="Recipient's username"
+          aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" onclick="createTweets()" type="button">Send</button>
+        </div>
+      </div>
+      <div class="row">
+        <div id="feedBody" class="col-md-12">
+         
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script language="javascript" type="text/javascript" src="js/web3.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
