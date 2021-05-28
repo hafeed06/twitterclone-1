@@ -1,7 +1,6 @@
 require("dotenv").config();
 const HDWalletProvider = require("@truffle/hdwallet-provider");
 
-<<<<<<< HEAD
 // Please set your mnemonic and ropsten_infura_apikey variables in a .env file
 
 // 12 mnemonic words that represents the account that will own the contract (got in Metamask)
@@ -12,13 +11,6 @@ const main_mnemonic = process.env.main_mnemonic;
 const ropsten_infura_apikey = process.env.ropsten_infura_apikey;
 const main_infura_apikey = process.env.main_infura_apikey;
 
-=======
-const ropsten_mnemonic = process.env.ropsten_mnemonic;
-const main_mnemonic = process.env.main_mnemonic;
-
-const ropsten_infura_apikey = process.env.ropsten_infura_apikey;
-const main_infura_apikey = process.env.main_infura_apikey;
->>>>>>> ed2e1978f8d33b3b6f5dde0f0a1509792555e2f8
 /**
  * Use this file to configure your truffle project. It's seeded with some
  * common settings for different networks and features like migrations,
@@ -64,11 +56,10 @@ module.exports = {
     // options below to some value.
     //
     development: {
-      host: "192.168.1.25",     // Localhost (default: none)
+      host: "127.0.0.1",     // Localhost (default: none)
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-<<<<<<< HEAD
     ropsten: {
 			provider: () =>
 				new HDWalletProvider(
@@ -78,35 +69,6 @@ module.exports = {
 			network_id: "3",
 			gas: 8000000,
 		}
-=======
-
-
-   /* development: {
-      host: process.env.host || "localhost",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
-      network_id: "*",
-      gas: 6721975,       // Any network (default: none)
-    },
-
-    ropsten: {
-      provider: () =>
-        new HDWalletProvider(
-            ropsten_mnemonic,
-            "https://ropsten.infura.io/v3/" + ropsten_infura_apikey
-        ),
-      network_id: "3",
-      gas: 8000000,
-    },
-    coverage: {
-      host: process.env.host || "localhost",
-      network_id: "*",
-      port: 8555,
-      gas: 0xfffffffffff,
-      gasPrice: 0x01,
-    }
-    */
-
->>>>>>> ed2e1978f8d33b3b6f5dde0f0a1509792555e2f8
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port
