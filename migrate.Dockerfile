@@ -9,4 +9,4 @@ COPY . .
 
 RUN truffle compile
 
-CMD ["truffle", "migrate", "--network", "ropsten"]
+CMD ["truffle", "migrate", "--network", "development"]
