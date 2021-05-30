@@ -16,13 +16,17 @@
 
 <body>
   <section class="ftco-section">
-    <div class="container" style="width:800px;">
-      <blockquote class="blockquote text-center">
-        <p class="mb-0">EPITA - MiniTwitter Project</p>
-        <footer class="blockquote-footer">By Boris, Chady and Abdelhafid</footer>
-      </blockquote>
-     
-      <br />
+    <div class="container">
+      <div class="row pt-lg-4">
+        <div class="col-lg-6 col-md-8 mx-auto text-center">
+          <h1 class="fw-light">EPITA - MiniTwitter Project</h1>
+          <p class="lead">By Boris, Chady and Abdelhafid</p>
+          <p>
+            <!-- <a href="#" id="login_metamask" class="btn btn-primary my-2">Portfolio</a> -->
+            <a href="#" id="dismiss" type="button" onclick="callMetamask()" id="login_metamask" class="btn btn-primary my-2">Connect Metamask</a>
+          </p>
+        </div>
+      </div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" id="tweetText" placeholder="Type Your Tweet Here" aria-label="Recipient's username"
           aria-describedby="basic-addon2">

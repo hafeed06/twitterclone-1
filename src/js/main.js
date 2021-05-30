@@ -170,17 +170,20 @@ readTweets = async () => {
 
 	for (tweet of tweetsFeed){
 		if (!tweet.deleted){
-			feedHTML += `<tr>
+			  feedHTML += `<tr>
 						<td style="width:500px">
 						<strong>${tweet.author}</strong>
 						<br>
 						<span>${tweet.content}</span>
-						</td>
+						</td>`
+
+        if ( tweet.author == USER_ADDRESS){
+            feedHTML += `
 						<td style="width:100px"><button type="button" class="btn btn-outline-primary"
 							style="font-size:14px;" onclick="editTweetPrompt(${tweet.id})">Edit</button></td>
 						<td><button onclick="deleteTweet(${tweet.id})" type="button" class="btn btn-outline-danger" style="font-size:14px;">Delete</button>
-						</td>
-					</tr>`
+						</td></tr>`
+        }
 		}
 	}
 
@@ -231,5 +234,28 @@ deleteTweet = (id) => {
 	catch (error) {
 		console.log(error)
 	}
+}
+
+callMetamask = async () => {
+  // Modern dapp browsers...
+  if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      console.log('ethereum accessible')
+      document.getElementById('dismiss').style.display='none';
+      try {
+          await ethereum.enable();
+      
+      } catch (error) {
+          console.log(error)
+      }
+  }
+  // Legacy dapp browsers...
+  else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+  }
+  // Non-dapp browsers...
+  else {
+      console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+  }
 }
 
