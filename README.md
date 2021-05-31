@@ -7,8 +7,8 @@
 * Abdelhafid Al Bekkaoui
 
 ### Documentation:
--------------------
-How to use twitterclone:
+
+* How to use twitterclone:
 * To pull the docker image use the following command
 ```
 docker pull chadmorra/twitterclone:latest
