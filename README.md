@@ -24,7 +24,7 @@ Access http://127.0.0.1:8000 in your Browser and connect your metamask
 
 For unit tests:
 ```
-docker run -it -p 8545:8545 testing_migrate:latest ganache-cli -h 0.0.0.0 &
+docker run -it testing_migrate:latest ganache-cli -h 0.0.0.0 &
 ```
 ```
 docker exec -it 151cb5138b6d truffle test
