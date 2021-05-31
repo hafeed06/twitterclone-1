@@ -6,7 +6,7 @@
 * Boris Bambo
 * Abdelhafid Al Bekkaoui
 
---> Documentation:
+### Documentation:
 -------------------
 How to use twitterclone:
 * To pull the docker image use the following command
