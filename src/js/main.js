@@ -165,8 +165,8 @@ readTweets = async () => {
 	tweetsFeed = await Tweets.methods.readTweets().call()
 	tweetsFeed = tweetsFeed.reverse()
 	feedHTML = `<div class="table-wrap" style="border:solid 1px #bad1f5; overflow:hidden; border-radius:4px;">
-				<table class="table table-striped">
-				<tbody style="width:600px;">`
+				<table class="table">
+				<tbody>`
 
 	for (tweet of tweetsFeed){
 		if (!tweet.deleted){
@@ -177,13 +177,14 @@ readTweets = async () => {
 						<span>${tweet.content}</span>
 						</td>`
 
-        if ( tweet.author == USER_ADDRESS){
+        if (tweet.author == USER_ADDRESS){
             feedHTML += `
-						<td style="width:100px"><button type="button" class="btn btn-outline-primary"
+						<td><button type="button" class="btn btn-outline-primary"
 							style="font-size:14px;" onclick="editTweetPrompt(${tweet.id})">Edit</button></td>
 						<td><button onclick="deleteTweet(${tweet.id})" type="button" class="btn btn-outline-danger" style="font-size:14px;">Delete</button>
-						</td></tr>`
+						</td>`
         }
+        feedHTML += `</tr>`
 		}
 	}
 
