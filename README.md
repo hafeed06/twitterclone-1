@@ -15,19 +15,16 @@ docker pull chadmorra/twitterclone:latest
 ```
 * To run the container and map the webserver port 8000 to port 8000 on your host use the below commands:
 ```
-docker image ls
-```
-```
-docker run -it -p 8000:8000 <image-id> python3 -m http.server
+docker run -it -p 8000:8000 chadmorra/twitterclone:latest python3 -m http.server &
 ```
 Access http://127.0.0.1:8000 in your Browser and connect your metamask
 
 For unit tests:
 ```
-docker run -it testing_migrate:latest ganache-cli -h 0.0.0.0 &
+docker run -it <image-id> ganache-cli -h 0.0.0.0 &
 ```
 ```
-docker exec -it 151cb5138b6d truffle test
+docker exec -it <image-id> truffle test
 ```
 
 Happy Tweeting, 
