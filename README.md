@@ -19,4 +19,8 @@ docker image ls
 
 docker run -it -p 8000:8000 <image-id> python3 -m http.server
 ```
+Access http://127.0.0.1:8000 in your Browser and connect your metamask
 
+Happy Tweeting, 
+
+Freedom of speech
