@@ -22,10 +22,10 @@ Access http://127.0.0.1:8000 in your Browser and connect your metamask
 
 For unit tests:
 ```
-docker run -it <image-id> ganache-cli -h 0.0.0.0 &
+docker run -it <container-id> ganache-cli -h 0.0.0.0 &
 ```
 ```
-docker exec -it <image-id> truffle test
+docker exec -it <container-id> truffle test
 ```
 
 Happy Tweeting, 
