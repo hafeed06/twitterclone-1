@@ -11,11 +11,14 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 RUN npm install && npm install -g truffle@5.1.59
+RUN npm install -g ganache-cli
 
 COPY . .
 
 RUN truffle compile
 
 CMD ["truffle", "migrate", "--network", "ropsten"]
+
+
 
 WORKDIR /usr/src/app/src
